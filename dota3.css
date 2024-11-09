@@ -1,0 +1,87 @@
+html{
+    background-image: url("Invo2.jpg") ;
+background-repeat:no-repeat  ;
+background-size: 100%;
+}
+
+
+
+body {
+     
+    
+    
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    }
+    #sidebar {
+   color:#ddd;
+     width: 250px;
+    height: 100vh;
+    background-color: #00000033;
+    position: fixed;
+    left: -250px;
+    transition: left 0.3s ease-in-out;
+    }
+    #sidebar.open {
+    left: 0;
+    }
+    #sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 50px;
+
+    }
+    #sidebar li {
+    padding: 10px;
+    border-bottom: 1px solid #ffffff;
+    }
+    #sidebar li:hover {
+    background-color: #ffffff;
+    }   
+    #toggle-btn {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    }   
+    #game , #spells, #about-box{
+        position: relative;
+        width: 600px;
+        height: 600px;
+        background-color: rgba(128, 128, 128, 0.315);
+        border: solid 3px rgb(0, 0, 0);
+        padding: 20px;
+        margin-left:  400px  ;
+    text-align: center;
+    }
+    .buttons{ margin-left:auto;
+        width: 300px;
+        
+        }
+
+#spells, #about-box{
+    position: absolute;
+    top: 10;
+    z-index: 9;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.603);
+    color: #ffffff;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+ 
+
+
+
+#about-box.visible {
+    opacity: 1;  
+}
+
