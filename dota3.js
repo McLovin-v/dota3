@@ -49,7 +49,7 @@ return array;
 let shuffledSpells = shuffleArray([...magic_spells]);
 
 function displayCurrentSpell() {
-    const spellsDiv = document.getElementById('game');
+    const spellsDiv = document.getElementById('game-text');
     if (spellsDiv) {
     spellsDiv.innerHTML = `
     <div>now spelling: ${shuffledSpells[currentSpellIndex].join('')}</div>

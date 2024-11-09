@@ -78,10 +78,27 @@ a{
     color: #ffffff;
 }
  
+.e{
+    width: 100px;
+    height: 100px;
+    
+    
 
+
+}
 
 
 #about-box.visible {
     opacity: 1;  
 }
 
+#imeg {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: end;
+    min-height: 85%;
+    gap: 0px;
+    padding: 0px;
+    width:50%;
+
+}
