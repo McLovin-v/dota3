@@ -115,5 +115,4 @@ aboutBoxBtn.addEventListener('click', ()=>{
     aboutBox.style.visibility = 'visible';
     spells.style.visibility = 'hidden';
 });
-
 displayCurrentSpell();
