@@ -71,15 +71,13 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-// Новая функция для сравнения заклинаний без учета порядка
+
 function areSpellsEqual(spell1, spell2) {
     if (spell1.length !== spell2.length) return false;
-    
-    // Создаем объекты для подсчета символов
+
     const count1 = {};
     const count2 = {};
-    
-    // Подсчитываем количество каждого символа в обоих заклинаниях
+
     for (let char of spell1) {
         count1[char] = (count1[char] || 0) + 1;
     }
@@ -87,7 +85,6 @@ function areSpellsEqual(spell1, spell2) {
         count2[char] = (count2[char] || 0) + 1;
     }
     
-    // Сравниваем количество каждого символа
     for (let char in count1) {
         if (count1[char] !== count2[char]) return false;
     }
