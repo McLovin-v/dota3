@@ -6,26 +6,27 @@ background-size: 100%;
 
 
 
-body {
-     
-    
-    
+body{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     }
+
+    #open-btn{
+        color:#ffffff;
+        background-image: url("imeg/stop_game.png") ;
+        
+    }
     #sidebar {
-   color:#ddd;
+   color:#fdfdfd;
      width: 250px;
     height: 100vh;
-    background-color: #00000033;
+    background-color: #1f023033;
     position: fixed;
     left: -250px;
     transition: left 0.3s ease-in-out;
     }
-    #sidebar.open {
-    left: 0;
-    }
+    
     #sidebar ul {
     list-style-type: none;
     padding: 0;
@@ -34,26 +35,16 @@ body {
     }
     #sidebar li {
     padding: 10px;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid #250e3a;
     }
     #sidebar li:hover {
-    background-color: #ffffff;
+    background-color: #291330;
     }   
-    #toggle-btn {
-    position: fixed;
-    right: 10px;
-    top: 10px;
-    z-index: 1;
-    cursor: pointer;
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    }   
-    #game , #spells, #about-box{
+
+    #game , #spells,#bind, #about-box{
         position: relative;
-        width: 600px;
-        height: 600px;
+        width: 800px;
+        height: 500px;
         background-color: rgba(128, 128, 128, 0.315);
         border: solid 3px rgb(0, 0, 0);
         padding: 20px;
@@ -61,17 +52,29 @@ body {
     text-align: center;
     }
     .buttons{ margin-left:auto;
+        width: 500px;
         width: 300px;
+        background-color: #250e3a;
+    }
+    #spells{
+        background-repeat: no-repeat;
+        background-image: url("imeg/image.png");
+        background-size: 100%;
+    }
         
-        }
 
-#spells, #about-box{
+#spells,#bind, #about-box{
     position: absolute;
     top: 10;
     z-index: 9;
     visibility: hidden;
     background-color: rgba(0, 0, 0, 0.603);
     color: #ffffff;
+}
+#l{
+    width: 500px;
+    height: 300px;
+
 }
 a{
     text-decoration: none;
@@ -93,12 +96,22 @@ a{
 }
 
 #imeg {
+    position: absolute;
+    right: 35%;
     display: grid;
     grid-auto-flow: column;
     align-items: end;
-    min-height: 85%;
-    gap: 0px;
+    top: 400px; 
+    gap: 10px;
     padding: 0px;
-    width:50%;
+    width:55%;
 
 }
+#invok img {
+    width: 50px;  
+    height: 50px; 
+    object-fit: cover;  
+    border-radius: 50%;  
+    margin: 5px;  
+}
+
