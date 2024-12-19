@@ -56,12 +56,7 @@ body{
         width: 300px;
         background-color: #250e3a;
     }
-    #spells{
-        background-repeat: no-repeat;
-        background-image: url("imeg/image.png");
-        background-size: 100%;
-    }
-        
+      
 
 #spells,#bind, #about-box{
     position: absolute;
@@ -84,11 +79,21 @@ a{
 .e{
     width: 100px;
     height: 100px;
+}
+#S{
     
-    
-
+    width: 100%;
+    height: 100%;
 
 }
+#spells{
+    padding: 0%;
+    height: 540px;
+    width: 900px;
+}
+
+
+
 
 
 #about-box.visible {

@@ -20,7 +20,7 @@ console.log (event.code);
 key_q =event.code
 });
 bindText.addEventListener ("click" , ()=>{
-    bindText
+    
         spells.style.visibility = 'hidden';
         aboutBox.style.visibility = 'hidden';
         
@@ -137,9 +137,9 @@ function displayCurrentImage(){
 
 document.addEventListener('keydown', function(event) { 
     if ([key_q, key_w, key_e].includes(event.code)) {
-        userInput.push(event.key);
+        userInput.push(event.code);
 
-        if (userInput.length > 12) {
+        if (userInput.length > 3) {
             userInput.shift();
         }
         displayCurrentSpell();
@@ -147,7 +147,7 @@ document.addEventListener('keydown', function(event) {
         displayCurrentImage();
     }
     else {console.log ('3')}
-    if (event.key.toLowerCase() === 'r') {
+    if (event.code==='KeyR') {
         checkSpell();
     }
 });
