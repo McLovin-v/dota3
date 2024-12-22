@@ -91,6 +91,63 @@ a{
     height: 540px;
     width: 900px;
 }
+#Y{ gap: 5px;
+    display: grid;
+    columns: 2;
+    height: 500px;
+    width: 300px;
+  
+   
+    
+}
+#U{
+    display: grid;
+    columns: 1;
+}
+#T{
+    gap: 5px;
+    display: grid;
+    columns: 2;
+    height: 500px;
+    width: 300px;
+  
+
+}
+#A{
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    top: 20px;
+    height: 500px;
+    width: 400px;
+    background-color: #250e3a85;
+}
+#D{
+    
+    display: grid;
+    grid-column: 1;
+    gap: 5px;
+  position: absolute;
+  top: 20px;
+    height: 500px;
+    width: 300px;
+    background-color: #38175757;
+    margin-left: 500px ;
+}
+#q1, #w2,#e3,#d4,#f5,#r6{
+    color: rgba(0, 132, 255, 0.521);
+    text-align: center;
+    vertical-align: middle;
+    font-size: 26px;
+    position: relative;
+    height: 85px;
+    width: 90px;
+background-color: #c71e8f42;
+}
+#D img {
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
 
 
 

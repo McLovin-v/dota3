@@ -39,6 +39,7 @@ open_menu.addEventListener("click", ()=>{
         sidebar.style.left = '-250px';
         spells.style.visibility = 'hidden';
         aboutBox.style.visibility = 'hidden';
+        bind.style.visibility = 'hidden';
     }else{
         sidebar1=true;
         sidebar.style.left = '0';
@@ -47,6 +48,12 @@ open_menu.addEventListener("click", ()=>{
 spellsBtn.addEventListener('click', () => {
     aboutBox.style.visibility = 'hidden';
     spells.style.visibility = 'visible';
+    bind.style.visibility = 'hidden';
+});
+aboutBoxBtn.addEventListener('click' , ()=> {
+    spells.style.visibility = 'hidden';
+    bind.style.visibility = 'hidden';
+
 });
 
 const magic_spells = [
