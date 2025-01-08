@@ -1,5 +1,5 @@
 html{
-    background-image: url("Invo2.jpg") ;
+    background-image: url("imeg/Invo2.jpg") ;
 background-repeat:no-repeat  ;
 background-size: 100%;
 }
@@ -43,8 +43,8 @@ body{
 
     #game , #spells,#bind, #about-box{
         position: relative;
-        width: 800px;
-        height: 500px;
+        width: 1000px;
+        height: 700px;
         background-color: rgba(128, 128, 128, 0.315);
         border: solid 3px rgb(0, 0, 0);
         padding: 20px;
@@ -67,7 +67,7 @@ body{
     color: #ffffff;
 }
 #l{
-    width: 500px;
+    width: 700px;
     height: 300px;
 
 }
@@ -77,13 +77,13 @@ a{
 }
  
 .e{
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
 }
 #S{
     
-    width: 100%;
-    height: 100%;
+    width: 1050px;
+    height: 743px;
 
 }
 #spells{
@@ -91,46 +91,55 @@ a{
     height: 540px;
     width: 900px;
 }
-#Y{ gap: 5px;
-    display: grid;
-    columns: 2;
-    height: 500px;
-    width: 300px;
-  
-   
-    
-}
-#U{
+#Y{ gap: 55px;
     display: grid;
     columns: 1;
-}
-#T{
-    gap: 5px;
-    display: grid;
-    columns: 2;
     height: 500px;
     width: 300px;
-  
 
+}
+.O{
+     
+    height: 70px;
+    width: 200px;
+}
+.K img{
+    
+    vertical-align: middle;
+ 
+}
+.K input{
+    color: #ffffffe8;
+    background-color: #5e059141;
+    
 }
 #A{
     display: flex;
     justify-content: right;
     position: absolute;
     top: 20px;
-    height: 500px;
-    width: 400px;
+    height: 700px;
+    width: 480px;
     background-color: #250e3a85;
 }
+#video{
+    z-index: 5;
+    width: 100px;
+    position: absolute;
+    top:1;
+    right: 300px;
+   display:grid;
+   grid-column: 1;
+} 
 #D{
     
     display: grid;
     grid-column: 1;
-    gap: 5px;
+    gap: 20px;
   position: absolute;
   top: 20px;
-    height: 500px;
-    width: 300px;
+    height: 700px;
+    width: 500px;
     background-color: #38175757;
     margin-left: 500px ;
 }
@@ -138,20 +147,44 @@ a{
     color: rgba(0, 132, 255, 0.521);
     text-align: center;
     vertical-align: middle;
-    font-size: 26px;
+    font-size: 40px;
     position: relative;
-    height: 85px;
+    height: 116px;
     width: 90px;
 background-color: #c71e8f42;
 }
 #D img {
-    margin-bottom: 5px;
-    margin-left: 5px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
+#quas,#wex,#exort,#invoke{
+
+     visibility: hidden;
+}
+#wex{
+    position: absolute;
+    top: 120px;
+
+}
+#exort{
+    position:absolute;
+    top: 240px;
+}
+#invoke{
+    position:absolute;
+    top: 466px;
+} 
+#special_bind {
+    position: absolute;
+    top:0px;
+    height: 98px;
+    width: 200px;
+    background-color: #534c4c49;
+    visibility: hidden;
+    left: 236px;;
 }
 
-
-
-
+ 
 
 #about-box.visible {
     opacity: 1;  

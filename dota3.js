@@ -15,11 +15,13 @@ var key_w ='KeyW';
 var key_e ='KeyE';
 const bind = document.getElementById ('bind');
 const bindText = document.getElementById ('Bind');
-bind.addEventListener("keydown", function(event) {
-console.log (event.code);
-key_q =event.code
-});
-bindText.addEventListener ("click" , ()=>{
+const Q1 =document.getElementById ('Wuas');
+const special=document.getElementById('special_bind');
+const elements = document.querySelectorAll('.K');
+// bind.addEventListener("keydown", function(event) {
+// key_q =event.code
+// });
+ bindText.addEventListener ("click" , ()=>{
     
         spells.style.visibility = 'hidden';
         aboutBox.style.visibility = 'hidden';
@@ -29,6 +31,31 @@ bindText.addEventListener ("click" , ()=>{
     }
     
 );
+
+
+
+
+Q1.addEventListener("click", ()=>{
+    Q1.style.visibility="hidden";
+     special.style.visibility="visible";
+     console.log('1');
+});
+ // Добавляем обработчик событий для каждого элемента
+ elements.forEach((element) => {
+    element.addEventListener('click', () => {
+        // Скрыть все элементы
+        elements.forEach((el) => el.classList.add('hidden'));
+        
+        // Показать только текущий элемент
+        element.classList.remove('hidden');
+    });
+});
+ 
+
+
+
+
+  
 
 
 
@@ -107,23 +134,27 @@ function displayCurrentSpell() {
     }
 }
 
+document.addEventListener("selectstart", function(ivent){
+    ivent.preventDefault();
+});
 
 function spellsImage(userInput) {
     imagDiv.innerHTML = ``;
     userInput.forEach(key => {
         let image = ``;
         if (key === key_q) {
+            console.log (key)
             image = `<img src="imeg/Quas_icon.webp" alt="Quas">`;
         } else if (key === key_w) {
             image = `<img src="imeg/Wex_icon.webp" alt="Wex">`;
         } else if (key === key_e) {
             image = `<img src="imeg/Exort_icon.webp" alt="Exort">`;
         }
-        if (image) {
-            imagDiv.innerHTML += image;
-        }
+        if (image!==``) {
+             imagDiv.innerHTML += image;
+       }
     });
-}
+ }
 
 
 function displayCurrentImage(){
