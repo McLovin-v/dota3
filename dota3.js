@@ -13,19 +13,22 @@ const open_menu = document.getElementById ('open-btn');
 var key_q ='KeyQ';
 var key_w ='KeyW';
 var key_e ='KeyE';
+var ISspecial=false;
+const Y1 = document.getElementById ('Y');
 const bind = document.getElementById ('bind');
 const bindText = document.getElementById ('Bind');
-const Q1 =document.getElementById ('Wuas');
-const special=document.getElementById('special_bind');
+const Q1 =document.getElementById ('Q1');
+let special=document.getElementById('special_bind');
 const elements = document.querySelectorAll('.K');
-// bind.addEventListener("keydown", function(event) {
-// key_q =event.code
-// });
+
+
+let imaegObj = null;
+
+
  bindText.addEventListener ("click" , ()=>{
-    
         spells.style.visibility = 'hidden';
-        aboutBox.style.visibility = 'hidden';
-        
+        aboutBox.style.visibility = 'hidden';   
+
     bind.style.visibility= 'visible';
     
     }
@@ -33,31 +36,77 @@ const elements = document.querySelectorAll('.K');
 );
 
 
-
-
-Q1.addEventListener("click", ()=>{
-    Q1.style.visibility="hidden";
-     special.style.visibility="visible";
-     console.log('1');
-});
- // Добавляем обработчик событий для каждого элемента
- elements.forEach((element) => {
-    element.addEventListener('click', () => {
-        // Скрыть все элементы
-        elements.forEach((el) => el.classList.add('hidden'));
+function  hidden_bind (){
+    let i = 0;
+elements.forEach(BINDS => {
+    BINDS.addEventListener("click", ()=> {
         
-        // Показать только текущий элемент
-        element.classList.remove('hidden');
-    });
+        console.log( ISspecial);
+
+        if (ISspecial === false){
+            // imaegObj = BINDS
+            // BINDS = special
+            //document.getElementById("Y").append(special);
+        special.style.visibility='visible';
+      
+        special.style.top = BINDS.offsetTop+'px';
+        special.style.left = BINDS.offsetLeft+'px';
+
+
+special.setAttribute ('before_block', BINDS.id);
+
+        BINDS.style.visibility='hidden';
+        
+        ISspecial=true;
+        }else {console.log( 62)};
+         
+    }
+    );
 });
- 
+};
+special.addEventListener("click" ,()=>{
+    console.log( ISspecial);
+console.log(elements);
+    ISspecial=false;
+    special.style.visibility ='hidden';
+    //document.getElementById("Y").append(Q1);
+    //  special = imaegObj;
+     console.log(  special.getAttribute('before_block'));
+     let id =special.getAttribute('before_block');
+    const before_block = document.getElementById(id);
+    before_block.style.visibility='visible';
+    //console.log (elements.find(el => el.getAttribute("id")=== id));
+    // for ( let i = 0; i<6; i++ ){
+    //     if (elements[i].getAttribute("id") === id){
+    //         if (i ==5){
+    //            // Y1.appendChild(elements[i]);
+    //             break
+    //         }
+    //        console.log("id: "+id) ;
+    //        let number = i+1;
+    //        console.log(elements[number].getAttribute('id'));
+    //        //Y1.insertBefore(before_block , elements[number])
+    //     }    
+    // }
+    //  elements.forEach(element=> {
+    //     if (element.getAttribute("id") === id){
+    //         console.log("id: "+id);
+    //         console.log("index: "+elements.indexOf(element))
+    //     }
+    //  })
+    //Y1.insertBefore(before_block)
+
+});
 
 
+// Q1.addEventListener("click", ()=>{
+//      Q1.style.visibility="hidden";
+//      special.style.visibility="visible";
+//      console.log('1');
 
 
-  
-
-
+// });
+hidden_bind();
 
 var sidebar1 = false;
 open_menu.addEventListener("click", ()=>{
@@ -107,8 +156,6 @@ var spellImage = {
     'KeyQKeyQKeyW': `image1.png`,
     'KeyQKeyWKeyW': `image2.png`
 };
-
-
 
 
 let currentSpellIndex = 0;

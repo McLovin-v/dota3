@@ -2,7 +2,148 @@ html{
     background-image: url("imeg/Invo2.jpg") ;
 background-repeat:no-repeat  ;
 background-size: 100%;
+margin: 0;
+background-color: #222;
 }
+
+ body {
+    background: radial-gradient(circle, rgba(77, 71, 85, 0.178) 0%, rgba(34, 34, 34, 0.527) 100%);
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+} 
+
+#bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 920px;
+    background: radial-gradient(circle, rgba(111, 92, 128, 0.863) 10%, transparent 80%);
+    animation: pulse 3s infinite alternate;
+    z-index: -1;
+    border-radius: 50px 50px 50px 50px; /* Закругляем все углы (сверху и снизу) */
+    box-shadow: 0 4px 15px rgba(135, 119, 150, 0.349), 0 0 25px rgba(138, 43, 226, 0.6); /* Добавляем свечение */
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#ELECTRO {
+    position: fixed;
+    bottom: 640px;   
+    left: 130px;    
+    width: 100px;   
+    height: 100px;  
+    border-radius: 100%;   
+    background-color: rgba(113, 30, 223, 0.37);  
+    box-shadow: 0 0 30px 10px rgba(138, 43, 226, 0.8);  /* Свечение вокруг элемента */
+    animation: glowing 1.5s infinite alternate;  /* Анимация свечения */
+}
+
+/* Анимация пульсации свечения */
+@keyframes electro-glowing {
+    0% {
+        box-shadow: 0 0 20px rgba(138, 43, 226, 0.6), 0 0 40px rgba(138, 43, 226, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(138, 43, 226, 1), 0 0 60px rgba(138, 43, 226, 1);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(138, 43, 226, 0.6), 0 0 40px rgba(138, 43, 226, 0.8);
+    }
+};
+
+
+
+/* #FIRE {
+    position: fixed;
+    bottom: 110px;  
+    left: 50px;    
+    width: 255px;  
+    height: 255px; 
+    border-radius: 100%;  
+    background-color: rgba(223, 172, 30, 0.459);  
+    box-shadow: 0 0 30px 10px rgba(187, 170, 21, 0.377);  
+    animation: fire-glowing 1.5s infinite alternate;  /* Анимация свечения для #FIRE */
+
+
+/* Анимация пульсации свечения для #FIRE */
+@keyframes fire-glowing {
+    0% {
+        box-shadow: 0 0 20px rgba(192, 127, 6, 0.6), 0 0 40px rgba(206, 128, 12, 0.589);
+    }
+    50% {
+        box-shadow: 0 0 40px rgb(209, 113, 4), 0 0 60px rgba(201, 123, 8, 0.76);
+    }
+    100% {
+        box-shadow: 0 0 100px rgba(206, 131, 46, 0.6), 0 0 100px rgba(233, 115, 5, 0.8);
+    }
+}
+
+
+#FIRE {
+    /* transition:  background-color 1s ease; */
+    position: fixed;
+    bottom: 110px;  
+    left: 50px;    
+    width: 255px;  
+    height: 255px; 
+    border-radius: 100%;  
+    background-color: rgba(223, 172, 30, 0.233);  
+    animation: fire-glowing 2s infinite alternate;  /* Анимация свечения для FIRE */
+}
+#FIRE :hover{
+    transform : scale(1.1);
+    background-color: #0a5fcff8;
+}
+
+/* Анимация мигания для #FIRE */
+@keyframes fire-glowing {
+    0% {
+        box-shadow: 0 0 20px rgba(192, 127, 6, 0.6), 0 0 40px rgba(206, 128, 12, 0.589);
+    }
+    50% {
+        box-shadow: 0 0 40px rgb(255, 69, 0), 0 0 60px rgba(255, 69, 0, 1); /* Оранжевый */
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(192, 127, 6, 0.6), 0 0 40px rgba(206, 128, 12, 0.589);
+    }
+}
+
+#ICE{
+    position: fixed;
+    bottom: 500px;  
+    left: 1350px;    
+    width: 200px;  
+    height: 200px; 
+    border-radius: 100%;  
+    background-color: rgba(17, 169, 189, 0.233);  
+    animation: ice-glowing 2s infinite alternate;  
+}
+
+
+@keyframes ice-glowing {
+    0% {
+        box-shadow: 0 0 20px rgba(7, 155, 147, 0.685), 0 0 40px rgba(12, 183, 206, 0.664);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(17, 182, 174, 0.685), 0 0 40px rgba(6, 98, 110, 0.664);  
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(7, 196, 186, 0.685), 0 0 40px rgba(15, 212, 238, 0.664);
+    }
+}
+
+
+   
+  
 
 
 
@@ -45,8 +186,8 @@ body{
         position: relative;
         width: 1000px;
         height: 700px;
-        background-color: rgba(128, 128, 128, 0.315);
-        border: solid 3px rgb(0, 0, 0);
+        background-color: rgba(128, 128, 128, 0.11);
+        border: solid 3px rgba(0, 0, 0, 0.274);
         padding: 20px;
         margin-left:  400px  ;
     text-align: center;
@@ -59,6 +200,7 @@ body{
       
 
 #spells,#bind, #about-box{
+    
     position: absolute;
     top: 10;
     z-index: 9;
@@ -175,6 +317,7 @@ background-color: #c71e8f42;
     top: 466px;
 } 
 #special_bind {
+    
     position: absolute;
     top:0px;
     height: 98px;
@@ -184,6 +327,7 @@ background-color: #c71e8f42;
     left: 236px;;
 }
 
+ 
  
 
 #about-box.visible {
